@@ -1,0 +1,80 @@
+html {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    background-color: #1f2937;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+
+.wrapper {
+    align-items: center;
+    text-align: center;
+}
+
+.header {
+    display: flex;
+}
+
+.logo {
+    color: #f9faf8;
+    font-size: 24px;
+}
+
+header ul {
+    color: #e5e7eb;
+    font-size: 18px;
+}
+
+.header-link {
+    list-style: none;
+    display: inline-block;
+    padding-left: 10px;
+}
+
+.header-link a {
+    color: #e5e7eb;
+    text-decoration: none;
+}
+
+.hero {
+    padding: 0 20px;
+}
+
+.hero h2 {
+    font-size: 48px;
+    font-weight: bolder;
+    color: #f9faf8;
+}
+
+.hero p {
+    font-size: 18px;
+    color: #e5e7eb;
+}
+
+.hero button {
+    background-color: #3882f6;
+}
+
+.hero-img {
+    height: 250px;
+    width: 500px;
+}
+
+.main h2 {
+    font-size: 36px;
+    font-weight: bolder;
+    color: #1f2937;
+}
+
+.quote {
+    background-color: #e5e7eb;
+}
+
+.quote p {
+    font-size: 36px;
+    color: #1f2937;
+}
