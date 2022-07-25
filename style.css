@@ -13,20 +13,32 @@ body {
 .wrapper {
     align-items: center;
     text-align: center;
-}
-
-.header {
-    display: flex;
+    display: grid;
+    /* grid-template-rows: auto auto auto auto auto;*/
+    grid-template-columns: 100px 1fr 1fr 100px; 
+    grid-template-areas: 
+    '. logo head-menu .'
+    '. hero-txt hero-img .'
+    '. main main .'
+    '. quote quote .'
+    '. footer footer .'
+    ;
+    padding: 10px;
+    gap: 20px;
 }
 
 .logo {
+    grid-area: logo;
     color: #f9faf8;
     font-size: 24px;
+    display: flex;
 }
 
-header ul {
+.menu {
+    grid-area: head-menu;
     color: #e5e7eb;
     font-size: 18px;
+    float: right;
 }
 
 .header-link {
@@ -38,19 +50,24 @@ header ul {
 .header-link a {
     color: #e5e7eb;
     text-decoration: none;
+    /* padding-left: 10px; */
 }
 
-.hero {
+.hero-txt {
+    grid-area: hero-txt;
     padding: 0 20px;
+    text-align: left;
+    height: 300px;
+    width: 500px;
 }
 
-.hero h2 {
+.hero-txt h2 {
     font-size: 48px;
     font-weight: bolder;
     color: #f9faf8;
 }
 
-.hero p {
+.hero-txt p {
     font-size: 18px;
     color: #e5e7eb;
 }
@@ -60,21 +77,72 @@ header ul {
 }
 
 .hero-img {
-    height: 250px;
+    grid-area: hero-img;
+    height: 300px;
     width: 500px;
 }
 
-.main h2 {
+.main {
+    grid-area: main;
+}
+
+.main-header {
     font-size: 36px;
     font-weight: bolder;
-    color: #1f2937;
+    color: #e4ebf6;
+}
+
+.people {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.person {
+    color: #e4ebf6;
+    margin: 15px;
+
+}
+
+.person img {
+    border: #3882f6 3px solid;
+    height: 90px;
+    width: 90px;
+    border-radius: 15px;
 }
 
 .quote {
+    grid-area: quote;
     background-color: #e5e7eb;
 }
 
 .quote p {
     font-size: 36px;
     color: #1f2937;
+}
+
+footer {
+    grid-area: footer;
+    color: #e4ebf6;
+    margin-top: 100px;
+    padding: 25px 90px;
+    height: 75px;
+    width: fit-content;
+    background-color: #3882f6;
+    align-items: flex-start;
+    text-align: center;
+}
+.footer-text {
+    float: left;
+}
+
+/* #btn {
+    text-align: center;
+    justify-content: center;
+    float: right;
+} */
+footer button {
+    display: block;
+    margin: auto;
+    justify-content: center;
 }
